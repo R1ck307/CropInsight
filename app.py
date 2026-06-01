@@ -99,6 +99,4 @@ severity = st.select_slider(
 name = st.text_input("Farmer Name")
 location = st.text_input("Farm Location")
 st.download_button(
-    "Download Report",
-    report_text
-)
+    "Download Report", report_text)
