@@ -92,3 +92,13 @@ if st.button("Diagnose"):
         st.error(
             "No matching disease found. Please consult an agricultural expert."
         )
+severity = st.select_slider(
+    "Severity",
+    ["Low", "Medium", "High"]
+)
+name = st.text_input("Farmer Name")
+location = st.text_input("Farm Location")
+st.download_button(
+    "Download Report",
+    report_text
+)
