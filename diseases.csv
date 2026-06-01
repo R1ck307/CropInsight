@@ -1,8 +1,41 @@
 Disease,Crop,Symptoms,Treatment
+
 Nitrogen Deficiency,Maize,Yellow lower leaves,Apply nitrogen fertilizer
+
 Potassium Deficiency,Maize,Brown leaf edges,Apply potassium fertilizer
+
+Phosphorus Deficiency,Maize,Purple leaves,Apply phosphorus fertilizer
+
+Rust,Maize,Orange pustules on leaves,Apply fungicide
+
+Leaf Blight,Maize,Large brown lesions,Remove infected leaves
+
 Early Blight,Tomato,Brown spots on leaves,Apply copper fungicide
-Late Blight,Tomato,Dark lesions and wilting,Remove infected leaves and use fungicide
+
+Late Blight,Tomato,Dark lesions and wilting,Use fungicide and remove infected leaves
+
+Septoria Leaf Spot,Tomato,Small dark leaf spots,Apply fungicide
+
+Bacterial Wilt,Tomato,Sudden wilting,Remove infected plants
+
 Powdery Mildew,Cucumber,White powder on leaves,Apply sulfur fungicide
-Black Rot,Cabbage,Yellow V-shaped leaf lesions,Remove infected plants
-Leaf Spot,Beans,Brown circular spots,Apply approved fungicide
+
+Downy Mildew,Cucumber,Yellow patches on leaves,Apply fungicide
+
+Anthracnose,Beans,Dark sunken lesions,Apply fungicide
+
+Leaf Spot,Beans,Brown circular spots,Apply fungicide
+
+Rust,Beans,Reddish brown spots,Apply fungicide
+
+Black Rot,Cabbage,Yellow V-shaped lesions,Destroy infected plants
+
+Clubroot,Cabbage,Swollen roots,Improve soil drainage
+
+Blackleg,Cabbage,Dark stem lesions,Remove infected plants
+
+Nitrogen Deficiency,Spinach,Yellowing leaves,Apply nitrogen fertilizer
+
+Leaf Miner,Spinach,White tunnels in leaves,Apply insecticide
+
+Downy Mildew,Spinach,Yellow spots under leaves,Apply fungicide
