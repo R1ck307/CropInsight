@@ -1,41 +1,41 @@
-Disease,Crop,Symptoms,Treatment,
+Disease,Crop,Symptoms,Treatment,Prevention,Severity,EstimatedCost
 
-Nitrogen Deficiency,Maize,Yellow lower leaves,Apply nitrogen fertilizer
+Nitrogen Deficiency,Maize,Yellow lower leaves,Apply nitrogen fertilizer,Use balanced fertilization and regular soil testing,Medium,E150
 
-Potassium Deficiency,Maize,Brown leaf edges,Apply potassium fertilizer,
+Potassium Deficiency,Maize,Brown leaf edges,Apply potassium fertilizer,Maintain proper soil nutrient levels,Medium,E180
 
-Phosphorus Deficiency,Maize,Purple leaves,Apply phosphorus fertilizer
+Phosphorus Deficiency,Maize,Purple leaves,Apply phosphorus fertilizer,Test soil before planting and apply phosphate fertilizers,Medium,E200
 
-Rust,Maize,Orange pustules on leaves,Apply fungicide
+Rust,Maize,Orange pustules on leaves,Apply approved fungicide,Plant resistant varieties and remove crop debris,High,E250
 
-Leaf Blight,Maize,Large brown lesions,Remove infected leaves
+Leaf Blight,Maize,Large brown lesions,Apply fungicide and remove infected leaves,Practice crop rotation and use certified seed,High,E300
 
-Early Blight,Tomato,Brown spots on leaves,Apply copper fungicide
+Early Blight,Tomato,Brown spots on leaves,Apply copper fungicide,Avoid overhead watering and rotate crops,Medium,E220
 
-Late Blight,Tomato,Dark lesions and wilting,Use fungicide and remove infected leaves
+Late Blight,Tomato,Dark lesions and wilting,Remove infected leaves and apply fungicide,Ensure good air circulation and avoid wet foliage,High,E350
 
-Septoria Leaf Spot,Tomato,Small dark leaf spots,Apply fungicide
+Septoria Leaf Spot,Tomato,Small dark leaf spots,Apply fungicide and prune affected leaves,Use disease-free seed and avoid overcrowding,Medium,E250
 
-Bacterial Wilt,Tomato,Sudden wilting,Remove infected plants
+Bacterial Wilt,Tomato,Sudden wilting,Remove infected plants immediately,Control insect vectors and use resistant varieties,High,E400
 
-Powdery Mildew,Cucumber,White powder on leaves,Apply sulfur fungicide
+Powdery Mildew,Cucumber,White powder on leaves,Apply sulfur fungicide,Provide adequate spacing and avoid excessive nitrogen,Medium,E200
 
-Downy Mildew,Cucumber,Yellow patches on leaves,Apply fungicide
+Downy Mildew,Cucumber,Yellow patches on leaves,Apply recommended fungicide,Improve air circulation and avoid wet leaves,High,E280
 
-Anthracnose,Beans,Dark sunken lesions,Apply fungicide
+Anthracnose,Beans,Dark sunken lesions,Apply fungicide and remove infected plants,Use certified seed and rotate crops,High,E250
 
-Leaf Spot,Beans,Brown circular spots,Apply fungicide
+Leaf Spot,Beans,Brown circular spots,Apply fungicide,Remove infected debris and avoid overhead irrigation,Medium,E180
 
-Rust,Beans,Reddish brown spots,Apply fungicide
+Rust,Beans,Reddish brown spots,Apply fungicide,Plant resistant varieties and monitor crops regularly,Medium,E220
 
-Black Rot,Cabbage,Yellow V-shaped lesions,Destroy infected plants
+Black Rot,Cabbage,Yellow V-shaped lesions,Destroy infected plants,Practice crop rotation and improve sanitation,High,E350
 
-Clubroot,Cabbage,Swollen roots,Improve soil drainage
+Clubroot,Cabbage,Swollen roots,Improve soil drainage and raise soil pH,Use disease-free seedlings and rotate crops,High,E400
 
-Blackleg,Cabbage,Dark stem lesions,Remove infected plants
+Blackleg,Cabbage,Dark stem lesions,Remove infected plants,Use certified seed and avoid planting in infected fields,High,E300
 
-Nitrogen Deficiency,Spinach,Yellowing leaves,Apply nitrogen fertilizer
+Nitrogen Deficiency,Spinach,Yellowing leaves,Apply nitrogen fertilizer,Conduct regular soil nutrient testing,Medium,E150
 
-Leaf Miner,Spinach,White tunnels in leaves,Apply insecticide
+Leaf Miner,Spinach,White tunnels in leaves,Apply approved insecticide,Use row covers and monitor pests regularly,Medium,E200
 
-Downy Mildew,Spinach,Yellow spots under leaves,Apply fungicide
+Downy Mildew,Spinach,Yellow spots under leaves,Apply fungicide,Ensure proper spacing and reduce leaf wetness,High,E280
