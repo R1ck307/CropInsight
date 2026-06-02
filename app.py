@@ -92,6 +92,7 @@ if st.button("Diagnose"):
         st.error(
             "No matching disease found. Please consult an agricultural expert."
         )
+        from expert_system.rules import diagnose
 severity = st.select_slider(
     "Severity",
     ["Low", "Medium", "High"]
