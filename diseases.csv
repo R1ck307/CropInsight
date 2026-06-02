@@ -1,6 +1,6 @@
-Disease,Crop,Symptoms,Treatment,Severity,Prevention,Estimated cost
+Disease,Crop,Symptoms,Treatment,
 
-Nitrogen Deficiency,Maize,Yellow lower leaves,Apply nitrogen fertilizer,Use balanced fertilization and regular soil testing,E150
+Nitrogen Deficiency,Maize,Yellow lower leaves,Apply nitrogen fertilizer
 
 Potassium Deficiency,Maize,Brown leaf edges,Apply potassium fertilizer,
 
