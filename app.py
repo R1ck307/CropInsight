@@ -98,4 +98,3 @@ severity = st.select_slider(
 )
 name = st.text_input("Farmer Name")
 location = st.text_input("Farm Location")
-st.image("maize.jpg")
