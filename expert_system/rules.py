@@ -1,55 +1,53 @@
 def diagnose(crop, symptoms):
 
-    if crop == "Maize":
-        if "yellow_leaves" in symptoms:
-            return "Nitrogen Deficiency"
-        elif "brown_edges" in symptoms:
-            return "Potassium Deficiency"
-        elif "purple_leaves" in symptoms:
-            return "Phosphorus Deficiency"
-        elif "orange_spots" in symptoms:
-            return "Rust"
-        elif "brown_lesions" in symptoms:
-            return "Leaf Blight"
+    rules = {
 
-    elif crop == "Tomato":
-        if "brown_spots" in symptoms:
-            return "Early Blight"
-        elif "wilting" in symptoms:
-            return "Late Blight"
-        elif "small_dark_spots" in symptoms:
-            return "Septoria Leaf Spot"
-        elif "sudden_wilt" in symptoms:
-            return "Bacterial Wilt"
+        "Maize": {
+            "yellow_leaves": "Nitrogen Deficiency",
+            "brown_edges": "Potassium Deficiency",
+            "purple_leaves": "Phosphorus Deficiency",
+            "orange_spots": "Rust",
+            "brown_lesions": "Leaf Blight"
+        },
 
-    elif crop == "Cucumber":
-        if "white_powder" in symptoms:
-            return "Powdery Mildew"
-        elif "yellow_patches" in symptoms:
-            return "Downy Mildew"
+        "Tomato": {
+            "brown_spots": "Early Blight",
+            "wilting": "Late Blight",
+            "small_dark_spots": "Septoria Leaf Spot",
+            "sudden_wilt": "Bacterial Wilt"
+        },
 
-    elif crop == "Beans":
-        if "sunken_lesions" in symptoms:
-            return "Anthracnose"
-        elif "brown_circles" in symptoms:
-            return "Leaf Spot"
-        elif "reddish_spots" in symptoms:
-            return "Rust"
+        "Cucumber": {
+            "white_powder": "Powdery Mildew",
+            "yellow_patches": "Downy Mildew"
+        },
 
-    elif crop == "Cabbage":
-        if "v_shape" in symptoms:
-            return "Black Rot"
-        elif "swollen_roots" in symptoms:
-            return "Clubroot"
-        elif "dark_stems" in symptoms:
-            return "Blackleg"
+        "Beans": {
+            "sunken_lesions": "Anthracnose",
+            "brown_circles": "Leaf Spot",
+            "reddish_spots": "Rust"
+        },
 
-    elif crop == "Spinach":
-        if "yellowing" in symptoms:
-            return "Nitrogen Deficiency"
-        elif "white_tunnels" in symptoms:
-            return "Leaf Miner"
-        elif "yellow_under" in symptoms:
-            return "Downy Mildew"
+        "Cabbage": {
+            "v_shape": "Black Rot",
+            "swollen_roots": "Clubroot",
+            "dark_stems": "Blackleg"
+        },
+
+        "Spinach": {
+            "yellowing": "Nitrogen Deficiency",
+            "white_tunnels": "Leaf Miner",
+            "yellow_under": "Downy Mildew"
+        }
+
+    }
+
+    if crop in rules:
+
+        for symptom in symptoms:
+
+            if symptom in rules[crop]:
+
+                return rules[crop][symptom]
 
     return None
