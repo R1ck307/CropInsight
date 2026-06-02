@@ -96,8 +96,6 @@ severity = st.select_slider(
     "Severity",
     ["Low", "Medium", "High"]
 )
-name = st.text_input("Farmer Name")
-location = st.text_input("Farm Location")
 st.write("### Prevention")
 st.write(result.iloc[0]["Prevention"])
 
@@ -106,3 +104,5 @@ st.write(result.iloc[0]["Severity"])
 
 st.write("### Estimated Treatment Cost")
 st.write(result.iloc[0]["EstimatedCost"])
+name = st.text_input("Farmer Name")
+location = st.text_input("Farm Location"
