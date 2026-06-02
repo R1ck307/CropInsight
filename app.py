@@ -105,4 +105,4 @@ st.write(result.iloc[0]["Severity"])
 st.write("### Estimated Treatment Cost")
 st.write(result.iloc[0]["EstimatedCost"])
 name = st.text_input("Farmer Name")
-location = st.text_input("Farm Location"
+location = st.text_input("Farm Location")
