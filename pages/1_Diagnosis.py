@@ -288,6 +288,47 @@ Confidence:
                 file_name="CropInsight_Report.txt"
             )
 
+            # Save Record
+
+try:
+    records = pd.read_csv(
+        "data/records.csv"
+    )
+
+except:
+
+    records = pd.DataFrame(
+        columns=[
+            "Farmer",
+            "Location",
+            "Crop",
+            "Disease",
+            "Severity",
+            "Date"
+        ]
+    )
+
+new_record = pd.DataFrame(
+    {
+        "Farmer":[farmer_name],
+        "Location":[farm_location],
+        "Crop":[crop],
+        "Disease":[disease_name],
+        "Severity":[severity],
+        "Date":[pd.Timestamp.today().date()]
+    }
+)
+
+records = pd.concat(
+    [records, new_record],
+    ignore_index=True
+)
+
+records.to_csv(
+    "data/records.csv",
+    index=False
+)
+
     else:
 
         st.error(
