@@ -11,7 +11,6 @@ st.title("🌾 Crop Diagnosis")
 st.header("Farmer Information")
 
 farmer_name = st.text_input("Farmer Name")
-
 farm_location = st.text_input("Farm Location")
 
 # -----------------------
@@ -37,7 +36,6 @@ crop = st.selectbox(
 # -----------------------
 
 try:
-
     if crop == "Maize":
         st.image("assets/maize.jpg.jpeg", width=300)
 
@@ -183,7 +181,7 @@ if st.button("Diagnose"):
 
     disease = diagnose(crop, symptoms)
 
-    if disease:
+    if disease and disease != "No matching disease found":
 
         df = pd.read_csv("data/diseases.csv")
 
@@ -234,17 +232,17 @@ if st.button("Diagnose"):
 
             st.write(
                 f"""
-                Crop Selected: {crop}
+Crop Selected: {crop}
 
-                Symptoms Selected:
-                {', '.join(symptoms)}
+Symptoms Selected:
+{', '.join(symptoms)}
 
-                Rule Activated:
-                {crop} + Symptoms
+Rule Activated:
+{crop} + Symptoms
 
-                Diagnosis:
-                {disease_name}
-                """
+Diagnosis:
+{disease_name}
+"""
             )
 
             st.header("Treatment Timeline")
@@ -288,49 +286,47 @@ Confidence:
                 file_name="CropInsight_Report.txt"
             )
 
-            # Save Record
+            # -----------------------
+            # SAVE RECORD
+            # -----------------------
 
-try:
-    records = pd.read_csv(
-        "data/records.csv"
-    )
+            try:
+                records = pd.read_csv("data/records.csv")
 
-except:
+            except:
+                records = pd.DataFrame(
+                    columns=[
+                        "Farmer",
+                        "Location",
+                        "Crop",
+                        "Disease",
+                        "Severity",
+                        "Date"
+                    ]
+                )
 
-    records = pd.DataFrame(
-        columns=[
-            "Farmer",
-            "Location",
-            "Crop",
-            "Disease",
-            "Severity",
-            "Date"
-        ]
-    )
+            new_record = pd.DataFrame(
+                {
+                    "Farmer": [farmer_name],
+                    "Location": [farm_location],
+                    "Crop": [crop],
+                    "Disease": [disease_name],
+                    "Severity": [severity],
+                    "Date": [pd.Timestamp.today().date()]
+                }
+            )
 
-new_record = pd.DataFrame(
-    {
-        "Farmer":[farmer_name],
-        "Location":[farm_location],
-        "Crop":[crop],
-        "Disease":[disease_name],
-        "Severity":[severity],
-        "Date":[pd.Timestamp.today().date()]
-    }
-)
+            records = pd.concat(
+                [records, new_record],
+                ignore_index=True
+            )
 
-records = pd.concat(
-    [records, new_record],
-    ignore_index=True
-)
-
-records.to_csv(
-    "data/records.csv",
-    index=False
-)
+            records.to_csv(
+                "data/records.csv",
+                index=False
+            )
 
     else:
-
         st.error(
             "No matching disease found."
-    )
+            )
