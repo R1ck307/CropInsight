@@ -1,1 +1,21 @@
 crop,disease,symptoms,cause,severity,treatment,prevention,organic_solution,chemical_solution,risk_conditions
+Maize,Fall Armyworm,Holes in leaves;damaged young plants,Pest infestation,High,Use pest control methods and remove affected leaves,Regular field inspection and early detection,Neem extract and biological control,Approved insecticides,Warm weather and poor monitoring
+Maize,Maize Rust,Orange-brown spots on leaves,Fungal infection,Medium,Apply fungicide and use resistant varieties,Crop rotation and resistant seeds,Remove infected leaves,Fungicides,High humidity
+Maize,Leaf Blight,Brown leaf lesions,Fungal infection,High,Apply fungicide and remove infected plants,Proper spacing and sanitation,Compost and natural soil management,Fungicides,Wet conditions
+Tomato,Early Blight,Brown spots with rings on leaves,Fungal infection,Medium,Apply fungicide and remove infected leaves,Crop rotation and clean farming,Neem oil treatment,Fungicides,Warm humid weather
+Tomato,Late Blight,Dark patches and rotting fruit,Fungal infection,High,Use fungicide and resistant varieties,Avoid excess moisture and improve airflow,Organic fungicide,Fungicides,Cool wet conditions
+Tomato,Bacterial Wilt,Wilting leaves and plant death,Bacteria,High,Remove infected plants and disinfect tools,Use clean planting materials,Bio-control methods,Bactericides,Contaminated soil
+Tomato,Tomato Leaf Curl,Leaf curling and stunted growth,Virus transmitted by insects,Medium,Control insect vectors,Use resistant varieties,Remove infected plants,Insect control products,High insect activity
+Beans,Bean Rust,Orange spots on leaves,Fungal infection,Medium,Apply fungicide and remove affected leaves,Crop rotation,Organic sprays,Fungicides,High humidity
+Beans,Bacterial Blight,Water-soaked leaf spots,Bacteria,High,Remove infected plants,Use disease-free seeds,Natural treatments,Copper-based products,Warm wet weather
+Cabbage,Black Rot,Yellow V-shaped leaf marks,Bacteria,High,Remove infected plants and improve hygiene,Clean seeds and crop rotation,Biological control,Copper treatments,Warm humid conditions
+Cabbage,Downy Mildew,White growth under leaves,Fungal infection,Medium,Apply fungicide,Reduce moisture and improve airflow,Organic fungicide,Fungicides,High humidity
+Potato,Potato Late Blight,Dark leaf spots and rotting tubers,Fungal infection,High,Apply fungicide and remove infected plants,Use resistant varieties,Compost management,Fungicides,Cool wet weather
+Potato,Early Blight,Brown circular spots,Fungal infection,Medium,Fungicide application,Crop rotation,Neem based sprays,Fungicides,Warm humid weather
+Cassava,Cassava Mosaic Disease,Mosaic patterns on leaves,Virus,High,Remove infected plants and use resistant varieties,Healthy planting materials,Remove infected plants,Vector control products,Whitefly presence
+Rice,Rice Blast,Diamond shaped leaf lesions,Fungal infection,High,Fungicide and resistant varieties,Balanced fertilizer use,Organic management,Fungicides,High humidity
+Wheat,Wheat Rust,Rust colored spots,Fungal infection,Medium,Use fungicides and resistant varieties,Crop monitoring,Natural fungal control,Fungicides,Warm humid weather
+Groundnut,Leaf Spot,Dark spots on leaves,Fungal infection,Medium,Fungicide application,Crop rotation,Organic sprays,Fungicides,Wet conditions
+Banana,Banana Wilt,Yellowing leaves and plant collapse,Bacteria,High,Remove infected plants,Clean tools and planting material,Biological control,Approved treatments,Contaminated farms
+Coffee,Coffee Leaf Rust,Orange powder on leaves,Fungal infection,High,Fungicide and resistant plants,Proper farm management,Organic fungal control,Fungicides,High humidity
+Sugarcane,Red Rot,Red internal stem discoloration,Fungal infection,High,Remove infected plants and use resistant varieties,Clean planting material,Field sanitation,Fungicides,Warm humid environments
