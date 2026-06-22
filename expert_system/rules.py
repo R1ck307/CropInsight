@@ -1,53 +1,157 @@
-def diagnose(crop, symptoms):
+import pandas as pd
+import os
 
-    rules = {
 
-        "Maize": {
-            "yellow_leaves": "Nitrogen Deficiency",
-            "brown_edges": "Potassium Deficiency",
-            "purple_leaves": "Phosphorus Deficiency",
-            "orange_spots": "Rust",
-            "brown_lesions": "Leaf Blight"
-        },
+DISEASE_FILE = "data/diseases.csv"
 
-        "Tomato": {
-            "brown_spots": "Early Blight",
-            "wilting": "Late Blight",
-            "small_dark_spots": "Septoria Leaf Spot",
-            "sudden_wilt": "Bacterial Wilt"
-        },
 
-        "Cucumber": {
-            "white_powder": "Powdery Mildew",
-            "yellow_patches": "Downy Mildew"
-        },
 
-        "Beans": {
-            "sunken_lesions": "Anthracnose",
-            "brown_circles": "Leaf Spot",
-            "reddish_spots": "Rust"
-        },
+# -----------------------------
+# Load Disease Database
+# -----------------------------
 
-        "Cabbage": {
-            "v_shape": "Black Rot",
-            "swollen_roots": "Clubroot",
-            "dark_stems": "Blackleg"
-        },
+def load_diseases():
 
-        "Spinach": {
-            "yellowing": "Nitrogen Deficiency",
-            "white_tunnels": "Leaf Miner",
-            "yellow_under": "Downy Mildew"
-        }
+    if os.path.exists(DISEASE_FILE):
+
+        return pd.read_csv(DISEASE_FILE)
+
+
+    return pd.DataFrame()
+
+
+
+# -----------------------------
+# Diagnosis Engine
+# -----------------------------
+
+def diagnose_crop(crop, symptoms):
+
+
+    diseases = load_diseases()
+
+
+    if diseases.empty:
+
+        return None
+
+
+
+    crop_data = diseases[
+        diseases["crop"]
+        .str.lower()
+        ==
+        crop.lower()
+    ]
+
+
+
+    matches = []
+
+
+
+    for index, row in crop_data.iterrows():
+
+
+        disease_symptoms = (
+            str(row["symptoms"])
+            .lower()
+        )
+
+
+
+        score = 0
+
+
+
+        symptom_list = symptoms.lower().split(",")
+
+
+
+        for symptom in symptom_list:
+
+
+            if symptom.strip() in disease_symptoms:
+
+                score += 1
+
+
+
+        if score > 0:
+
+
+            matches.append(
+                {
+
+                    "disease":
+                    row["disease"],
+
+
+                    "confidence":
+                    min(
+                        score * 25,
+                        100
+                    ),
+
+
+                    "severity":
+                    row["severity"],
+
+
+                    "cause":
+                    row["cause"],
+
+
+                    "treatment":
+                    row["treatment"],
+
+
+                    "prevention":
+                    row["prevention"],
+
+
+                    "organic_solution":
+                    row["organic_solution"],
+
+
+                    "chemical_solution":
+                    row["chemical_solution"]
+
+                }
+            )
+
+
+
+    if matches:
+
+
+        matches = sorted(
+            matches,
+            key=lambda x:
+            x["confidence"],
+            reverse=True
+        )
+
+
+        return matches[0]
+
+
+
+    return {
+
+        "disease":
+        "Unknown",
+
+
+        "confidence":
+        0,
+
+
+        "severity":
+        "Unknown",
+
+
+        "treatment":
+        "No recommendation available"
 
     }
-
-    if crop in rules:
-
-        for symptom in symptoms:
-
-            if symptom in rules[crop]:
-
-                return rules[crop][symptom]
-
-    return None
