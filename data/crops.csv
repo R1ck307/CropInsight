@@ -1,1 +1,21 @@
-
+crop,category,common_regions,growing_season
+Maize,Cereal,Sub-Saharan Africa,Spring-Summer
+Tomato,Vegetable,Sub-Saharan Africa,Year Round
+Beans,Legume,Sub-Saharan Africa,Spring-Summer
+Cabbage,Vegetable,Highland Regions,Year Round
+Potato,Tuber,Highland Regions,Spring-Autumn
+Cassava,Root Crop,Tropical Africa,Year Round
+Sorghum,Cereal,Dry Regions,Spring-Summer
+Rice,Cereal,Wetland Regions,Spring-Summer
+Wheat,Cereal,Highland Regions,Winter
+Groundnut,Legume,Sub-Saharan Africa,Spring-Summer
+Onion,Vegetable,Sub-Saharan Africa,Year Round
+Sweet Potato,Root Crop,Tropical Africa,Year Round
+Banana,Fruit,Tropical Africa,Year Round
+Mango,Fruit,Tropical Africa,Year Round
+Avocado,Fruit,Highland Regions,Year Round
+Coffee,Cash Crop,East Africa,Year Round
+Tea,Cash Crop,Highland Regions,Year Round
+Sugarcane,Cash Crop,Tropical Africa,Year Round
+Cotton,Cash Crop,Dry Regions,Spring-Summer
+Millet,Cereal,Dry Regions,Spring-Summer
