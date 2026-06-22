@@ -1,4 +1,4 @@
-Disease,Crop,Symptoms,Treatment,Prevention,Severity,EstimatedCost
+crop,disease,symptoms,cause,severity,treatment,prevention,organic_solution,chemical_solution,risk_conditions
 
 Nitrogen Deficiency,Maize,Yellow lower leaves,Apply nitrogen fertilizer,Use balanced fertilization and soil testing,Medium,E150
 
