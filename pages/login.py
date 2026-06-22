@@ -6,20 +6,21 @@ import os
 USER_FILE = "database/users.csv"
 
 
+# -----------------------------
+# Load Users
+# -----------------------------
+
 def load_users():
 
-    try:
+    if os.path.exists(USER_FILE):
 
-        if os.path.exists(USER_FILE):
-
+        try:
             users = pd.read_csv(USER_FILE)
 
             return users
 
-
-    except Exception:
-
-        pass
+        except:
+            pass
 
 
     return pd.DataFrame(
@@ -33,6 +34,11 @@ def load_users():
     )
 
 
+
+# -----------------------------
+# Save User
+# -----------------------------
+
 def save_user(user):
 
     users = load_users()
@@ -45,6 +51,7 @@ def save_user(user):
         ignore_index=True
     )
 
+
     users.to_csv(
         USER_FILE,
         index=False
@@ -52,14 +59,18 @@ def save_user(user):
 
 
 
+# -----------------------------
+# Page
+# -----------------------------
+
 st.title("🌱 CropInsight Farmer Account")
 
 
 users = load_users()
 
 
-choice = st.radio(
-    "Select option",
+option = st.radio(
+    "Choose option",
     [
         "Login",
         "Create Account"
@@ -72,25 +83,29 @@ choice = st.radio(
 # CREATE ACCOUNT
 # -----------------------------
 
-if choice == "Create Account":
+if option == "Create Account":
 
 
     name = st.text_input(
         "Full Name"
     )
 
+
     email = st.text_input(
         "Email"
     )
+
 
     password = st.text_input(
         "Password",
         type="password"
     )
 
+
     location = st.text_input(
-        "Farm Location"
+        "Location"
     )
+
 
 
     if st.button("Create Account"):
@@ -98,15 +113,15 @@ if choice == "Create Account":
 
         new_user = {
 
-            "id": len(users)+1,
+            "id": len(users) + 1,
 
-            "name": name,
+            "name": name.strip(),
 
-            "email": email,
+            "email": email.strip().lower(),
 
-            "password": password,
+            "password": password.strip(),
 
-            "location": location
+            "location": location.strip()
 
         }
 
@@ -124,7 +139,7 @@ if choice == "Create Account":
 # LOGIN
 # -----------------------------
 
-if choice == "Login":
+if option == "Login":
 
 
     email = st.text_input(
@@ -142,6 +157,28 @@ if choice == "Login":
     if st.button("Login"):
 
 
+        email = email.strip().lower()
+
+        password = password.strip()
+
+
+
+        users["email"] = (
+            users["email"]
+            .astype(str)
+            .str.strip()
+            .str.lower()
+        )
+
+
+        users["password"] = (
+            users["password"]
+            .astype(str)
+            .str.strip()
+        )
+
+
+
         result = users[
             (users["email"] == email)
             &
@@ -150,7 +187,7 @@ if choice == "Login":
 
 
 
-        if len(result) > 0:
+        if not result.empty:
 
 
             user = result.iloc[0]
@@ -158,9 +195,7 @@ if choice == "Login":
 
             st.session_state.logged_in = True
 
-
             st.session_state.user = user["name"]
-
 
             st.session_state.user_id = user["id"]
 
@@ -171,10 +206,9 @@ if choice == "Login":
             )
 
 
-
         else:
 
 
             st.error(
-                "Invalid email or password"
-)
+                "Email or password incorrect"
+            )
