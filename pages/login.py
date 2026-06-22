@@ -8,21 +8,29 @@ USER_FILE = "database/users.csv"
 
 def load_users():
 
-    if os.path.exists(USER_FILE):
+    try:
 
-        return pd.read_csv(USER_FILE)
+        if os.path.exists(USER_FILE):
 
-    else:
+            users = pd.read_csv(USER_FILE)
 
-        return pd.DataFrame(
-            columns=[
-                "id",
-                "name",
-                "email",
-                "password",
-                "location"
-            ]
-        )
+            return users
+
+
+    except Exception:
+
+        pass
+
+
+    return pd.DataFrame(
+        columns=[
+            "id",
+            "name",
+            "email",
+            "password",
+            "location"
+        ]
+    )
 
 
 def save_user(user):
