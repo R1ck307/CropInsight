@@ -1,4 +1,4 @@
-crop,disease,symptoms,cause,severity,treatment,prevention,organic_solution,chemical_solution,risk_conditions
+Crop,Disease,Symptoms,Cause,Severity,Treatment,Prevention,Organic_Solution,Chemical_Solution,Risk_Conditions
 Maize,Fall Armyworm,Holes in leaves;damaged young plants,Pest infestation,High,Use pest control methods and remove affected leaves,Regular field inspection and early detection,Neem extract and biological control,Approved insecticides,Warm weather and poor monitoring
 Maize,Maize Rust,Orange-brown spots on leaves,Fungal infection,Medium,Apply fungicide and use resistant varieties,Crop rotation and resistant seeds,Remove infected leaves,Fungicides,High humidity
 Maize,Leaf Blight,Brown leaf lesions,Fungal infection,High,Apply fungicide and remove infected plants,Proper spacing and sanitation,Compost and natural soil management,Fungicides,Wet conditions
