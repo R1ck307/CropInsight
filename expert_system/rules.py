@@ -151,3 +151,9 @@ def diagnose_crop(crop, symptoms):
         "risk_conditions":
         "N/A"
     }
+# -----------------------------
+# Compatibility Function
+# -----------------------------
+
+def diagnose(crop, symptoms):
+    return diagnose_crop(crop, symptoms)
